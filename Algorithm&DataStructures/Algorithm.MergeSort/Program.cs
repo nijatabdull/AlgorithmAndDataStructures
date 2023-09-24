@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            int[] ints = { 11, 2, 3, 1, 6, -1, 4, 2, -2 };
+            //int[] ints = { 11, 2, 3, 1, 6, -1, 4, 2, -2 };
+            int[] ints = GenerateNewArray(98);
+
+            //11, 2, 3, 1, 6, -1, 4, 2, -2 
 
             int[] sorted = MergeSort(ints);
 
@@ -18,60 +21,55 @@
 
         private static int[] MergeSort(int[] arr)
         {
-            //11, 2, 3, 1, 6, -1, 4, 2, -2 
-
-            //11, 2, 3, 1, 6  | -1, 4, 2, -2 
-
-            int leftArrLength = 0;
             int count = arr.Length;
+            int leftArrLength;
 
             if (count % 2 == 0)
                 leftArrLength = count / 2;
             else
                 leftArrLength = count / 2 + 1;
 
-            int rightArrLength = count - leftArrLength;
+            if (count == 1 && leftArrLength == 1)
+                return arr;
 
             int[] leftArr = new int[leftArrLength];
 
-            if (count > 1 && leftArrLength >= 1)
-            {
-                Array.Copy(arr, 0, leftArr, 0, leftArrLength);
-                leftArr = MergeSort(leftArr);
-            }
-            else if (leftArrLength > 0)
-            {
-                leftArr = arr;
-            }
+            Array.Copy(arr, 0, leftArr, 0, leftArrLength);
+            leftArr = MergeSort(leftArr);
+
+            int rightArrLength = count - leftArrLength;
 
             int[] rightArr = new int[rightArrLength];
 
-            if (count > 1 && rightArrLength >= 1)
+            Array.Copy(arr, leftArrLength, rightArr, 0, rightArrLength);
+            rightArr = MergeSort(rightArr);
+
+            int[] resultArr = new int[leftArrLength + rightArrLength];
+
+            int i = 0, j = 0;
+
+            while (i + j < leftArrLength + rightArrLength)
             {
-                Array.Copy(arr, rightArrLength + 1, rightArr, 0, rightArrLength);
-                rightArr = MergeSort(rightArr);
-            }
-            else if(rightArrLength > 0)
-            {
-                rightArr = arr;
+                if (j >= rightArrLength)
+                    resultArr[i + j] = leftArr[i++];
+                else if (i >= leftArrLength)
+                    resultArr[i + j] = rightArr[j++];
+                else if (leftArr[i] <= rightArr[j])
+                    resultArr[i + j] = leftArr[i++];
+                else if (leftArr[i] > rightArr[j])
+                    resultArr[i + j] = rightArr[j++];
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                Swap(arr, i, i + 1);
-            }
-
-            return arr;
+            return resultArr;
         }
 
-        private static void Swap(int[] arr, int i, int j)
+        private static int[] GenerateNewArray(int n)
         {
-            if (i != j)
-            {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
+            // Define an array of values we wish to return and populate it
+            int[] baseValues = Enumerable.Range(1, n).ToArray();
+            Random rnd = new Random();
+            // Shuffle the array randomly using Linq
+            return baseValues.OrderBy(x => rnd.Next()).ToArray();
         }
     }
 }
