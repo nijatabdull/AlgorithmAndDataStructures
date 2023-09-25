@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            //int[] ints = { 11, 2, 3, 1, 6, -1, 4, 2, -2 };   |  I guess, this is worst cases O(n^2)
-            //int[] ints = GenerateNewArray(98);
+            int[] ints = { 11, 2, 3, 1, 6, -1, 4, 2, -2 };
+            //int[] ints = GenerateNewArray(9999);
 
-            int[] ints = { 5, 1, 3, 11, 6, -1, 2, 0, 4 };
+            //int[] ints = { 5, 1, 3, 11, 6, -1, 2, 0, 4 };
 
             int[] sorted = QuickSort(ints);
 
@@ -22,44 +22,42 @@
         private static int[] QuickSort(int[] arr)
         {
             //5, 1, 3, 11, 6, -1, 2, 0, 4        {9}
-            int pivot = arr.Length - 1;
 
-            arr = Recursive(arr, pivot);
+            Recursive(arr, 0, arr.Length - 1);
 
             return arr;
         }
 
-        private static int[] Recursive(int[] arr, int pivot)
+        private static void Recursive(int[] arr, int low, int high)
         {
-            int i = 0;
-            int m = -1;
+            int i = low;
+            int m = low - 1;
+            int pivot = high;
 
             while (i <= pivot)
             {
-                if (arr[i] > arr[pivot])
+                if (i == pivot && i != ++m)
                 {
-                    i++;
-                    continue;
+                    pivot = m;
+                    Swap(arr, i, m);
                 }
-                else
+                else if (arr[i] <= arr[pivot])
                 {
                     m++;
-                    if (i == m)
-                        i++;
-                    else if (i > m)
-                    {
-                        if(i == pivot)
-                            pivot = m;
 
+                    if (i > m)
+                    {
                         Swap(arr, i, m);
                     }
-                        
                 }
+                i++;
             }
 
-            Recursive(arr, pivot);
+            if (low < pivot - 1)
+                Recursive(arr, low, pivot - 1);
 
-            return arr;
+            if (high > pivot + 1)
+                Recursive(arr, pivot + 1, high);
         }
 
         private static void Swap(int[] arr, int i, int j)
