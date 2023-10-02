@@ -9,10 +9,10 @@ namespace DataStructure.Node
             DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>();
 
             doublyLinkedList.AddLast(1);
-            DoublyNode<int> doublyNode = doublyLinkedList.AddLast(2);
-            doublyLinkedList.AddLast(3);
+            doublyLinkedList.AddLast(2);
+            DoublyNode<int> doublyNode = doublyLinkedList.AddLast(3);
 
-            doublyLinkedList.AddAfter(doublyNode, -1);
+            doublyLinkedList.Remove(doublyNode);
 
             //singly.Remove(6);
 
