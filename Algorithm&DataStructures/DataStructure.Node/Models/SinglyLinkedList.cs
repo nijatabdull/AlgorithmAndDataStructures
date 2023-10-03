@@ -2,7 +2,7 @@
 
 namespace DataStructure.Node.Models
 {
-    internal class SinglyLinkedList<T> : IEnumerable<T>
+    public class SinglyLinkedList<T> : IEnumerable<T>
     {
         private Node<T> _head;
         private Node<T> _tail;
@@ -17,7 +17,7 @@ namespace DataStructure.Node.Models
             _size = 0;
         }
 
-        internal void Add(T item)
+        public void Add(T item)
         {
             Node<T> newNode = new() { Value = item };
 
@@ -35,7 +35,7 @@ namespace DataStructure.Node.Models
             _version++;
         }
 
-        internal void Remove(T item)
+        public void Remove(T item)
         {
             Node<T> node = _head;
             Node<T> previousNode = default;

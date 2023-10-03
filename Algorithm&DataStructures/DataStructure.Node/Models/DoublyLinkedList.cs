@@ -1,6 +1,6 @@
 ﻿namespace DataStructure.Node.Models
 {
-    internal class DoublyLinkedList<T>
+    public class DoublyLinkedList<T>
     {
         private int _size = 0;
         private int _version = 0;
@@ -164,6 +164,50 @@
 
             _size--;
             _version++;
+        }
+
+        public T RemoveLast()
+        {
+            T value = Last.Value;
+
+            DoublyNode<T> temp = Last;
+
+            if (temp.Previous != null)
+            {
+                temp.Previous.Next = null;
+                Last = temp.Previous;
+            }
+            else
+            {
+                First = Last = null;
+            }
+
+            _size--;
+            _version++;
+
+            return value;
+        }
+
+        public T RemoveFirst()
+        {
+            T value = First.Value;
+
+            DoublyNode<T> temp = First;
+
+            if (temp.Next != null)
+            {
+                temp.Next.Previous = null;
+                First = temp.Next;
+            }
+            else
+            {
+                First = Last = null;
+            }
+
+            _size--;
+            _version++;
+
+            return value;
         }
     }
 }

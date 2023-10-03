@@ -14,6 +14,9 @@ namespace DataStructure.Node
 
             doublyLinkedList.Remove(doublyNode);
 
+            doublyLinkedList.RemoveLast();
+            doublyLinkedList.RemoveLast();
+
             //singly.Remove(6);
 
             //foreach (int i in singly)
