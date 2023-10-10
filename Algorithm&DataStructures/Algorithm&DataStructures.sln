@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.List", "DataS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Node", "DataStructure.Node\DataStructure.Node.csproj", "{3DD81279-2FF1-4C46-B1D7-F90320E2CBB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure.Stack", "DataStructure.Stack\DataStructure.Stack.csproj", "{93724FF4-A308-46DD-8398-3365F06B16AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Stack", "DataStructure.Stack\DataStructure.Stack.csproj", "{93724FF4-A308-46DD-8398-3365F06B16AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure.Queue", "DataStructures.Queue\DataStructure.Queue.csproj", "{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{93724FF4-A308-46DD-8398-3365F06B16AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93724FF4-A308-46DD-8398-3365F06B16AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93724FF4-A308-46DD-8398-3365F06B16AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{2F812071-1D5A-4AF1-BCC1-A568DB94624F} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
 		{3DD81279-2FF1-4C46-B1D7-F90320E2CBB6} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
 		{93724FF4-A308-46DD-8398-3365F06B16AA} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
+		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF0D05D0-0AEC-44E8-B9D2-84DDC1161AEB}
