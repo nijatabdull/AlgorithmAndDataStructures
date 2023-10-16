@@ -31,7 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Stack", "Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Queue", "DataStructures.Queue\DataStructure.Queue.csproj", "{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.BinarySearch", "Algorithm.BinarySearch\Algorithm.BinarySearch.csproj", "{84268594-0624-4A76-A524-23E910F04BEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithm.BinarySearch", "Algorithm.BinarySearch\Algorithm.BinarySearch.csproj", "{84268594-0624-4A76-A524-23E910F04BEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SymbolTables", "SymbolTables", "{80E29EC1-C2ED-45CA-96FA-D0EC291A4E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolTable.Sequential", "SymbolTable.Sequential\SymbolTable.Sequential.csproj", "{85778442-316C-4077-9885-96761C6F769C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{84268594-0624-4A76-A524-23E910F04BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84268594-0624-4A76-A524-23E910F04BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84268594-0624-4A76-A524-23E910F04BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85778442-316C-4077-9885-96761C6F769C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85778442-316C-4077-9885-96761C6F769C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85778442-316C-4077-9885-96761C6F769C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85778442-316C-4077-9885-96761C6F769C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +116,8 @@ Global
 		{93724FF4-A308-46DD-8398-3365F06B16AA} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
 		{B0445A6B-0EE5-4A31-A8E1-9DC171910FA5} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
 		{84268594-0624-4A76-A524-23E910F04BEF} = {3A355002-C6FB-48D2-AF39-EDDE95AEEC6F}
+		{80E29EC1-C2ED-45CA-96FA-D0EC291A4E70} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
+		{85778442-316C-4077-9885-96761C6F769C} = {80E29EC1-C2ED-45CA-96FA-D0EC291A4E70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF0D05D0-0AEC-44E8-B9D2-84DDC1161AEB}
