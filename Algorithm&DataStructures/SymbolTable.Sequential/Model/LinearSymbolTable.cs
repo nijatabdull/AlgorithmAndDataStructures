@@ -94,15 +94,19 @@
             return false;
         }
 
-        public void TryGet(TKey key, out TValue value)
+        public bool TryGet(TKey key, out TValue value)
         {
             if (key == null) throw new ArgumentNullException(nameof(key));
 
-            if (_head == null) throw new ArgumentNullException("List is emptry");
+            if (_head == null)
+            {
+                value = default;
+                return false;
+            }
 
             if (_head == null)
             {
-                value = _head.Value; return;
+                value = _head.Value; return true;
             }
             else
             {
@@ -114,7 +118,7 @@
                     {
                         value = node.Value;
 
-                        return;
+                        return true;
                     }
 
                     node = node.Next;
@@ -122,6 +126,8 @@
             }
 
             value = default;
+
+            return false;
         }
 
         public IEnumerable<TKey> Keys()
@@ -136,6 +142,8 @@
                     throw new InvalidOperationException();
 
                 yield return node.Key;
+
+                node = node.Next;
             }
         }
     }
