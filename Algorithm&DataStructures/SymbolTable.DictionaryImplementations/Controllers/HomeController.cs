@@ -29,7 +29,20 @@ namespace SymbolTable.DictionaryImplementations.Controllers
             keyValuePairs.Remove(0);
 
             keyValuePairs.TryGetValue(0, out var valuess);
-           
+
+            return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult TestLinearProbing()
+        {
+            LinearDictionary<int, string> keyValuePairs = new LinearDictionary<int, string>();
+
+            for (int i = 0; i < 60; i++)
+            {
+                keyValuePairs.Add(i, $"test{i}");
+            }
+
             return Ok();
         }
     }
