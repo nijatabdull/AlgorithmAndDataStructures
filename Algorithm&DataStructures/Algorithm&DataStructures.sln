@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SymbolTable.DictionaryImple
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithm.SieveOfEretosthenes", "Algorithm.SieveOfEretosthenes\Algorithm.SieveOfEretosthenes.csproj", "{D420FACD-E05B-4959-A53F-B902F26DA97D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure.Tree", "DataStructure.Tree\DataStructure.Tree.csproj", "{FEF27711-9B10-4C40-809D-FF32A3CE8C96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Tree", "DataStructure.Tree\DataStructure.Tree.csproj", "{FEF27711-9B10-4C40-809D-FF32A3CE8C96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm.Heap[Sort]", "Algorithm.Heap[Sort]\Algorithm.Heap[Sort].csproj", "{F1E19FE9-A003-4647-895C-D776CB97529C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{FEF27711-9B10-4C40-809D-FF32A3CE8C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF27711-9B10-4C40-809D-FF32A3CE8C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF27711-9B10-4C40-809D-FF32A3CE8C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E19FE9-A003-4647-895C-D776CB97529C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E19FE9-A003-4647-895C-D776CB97529C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E19FE9-A003-4647-895C-D776CB97529C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E19FE9-A003-4647-895C-D776CB97529C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +159,7 @@ Global
 		{81532C6D-D8F1-4DBF-B24B-EB1765677158} = {80E29EC1-C2ED-45CA-96FA-D0EC291A4E70}
 		{D420FACD-E05B-4959-A53F-B902F26DA97D} = {3A355002-C6FB-48D2-AF39-EDDE95AEEC6F}
 		{FEF27711-9B10-4C40-809D-FF32A3CE8C96} = {23EAD3AE-A2CE-4282-8475-26320561BB58}
+		{F1E19FE9-A003-4647-895C-D776CB97529C} = {3A355002-C6FB-48D2-AF39-EDDE95AEEC6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF0D05D0-0AEC-44E8-B9D2-84DDC1161AEB}
