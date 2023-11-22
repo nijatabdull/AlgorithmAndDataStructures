@@ -1,5 +1,6 @@
 using Algorithm.Heap_Sort_.Model;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Immutable;
 using System.Diagnostics;
 
 namespace Algorithm.Heap_Sort_.Controllers
@@ -58,6 +59,34 @@ namespace Algorithm.Heap_Sort_.Controllers
 
             string firstPeek = priorityQueue.Peek();
             string firstDequeue = priorityQueue.Dequeue();
+
+            return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult ImmutableTest()
+        {
+            //first test
+            ImmutableStack<int> imStack = ImmutableStack<int>.Empty;
+
+            ImmutableStack<int> first = imStack.Push(1);
+            ImmutableStack<int> second = first.Push(2);
+
+            ImmutableStack<int> poped = second.Pop();
+
+            bool zad1 = first.Equals(poped);
+            bool zad2 = first == poped;
+
+            //first test
+            ImmutableList<int>.Builder ints = ImmutableList.CreateBuilder<int>();
+
+            ints.Add(1);
+            ints.Add(2);
+            ints.Add(3);
+            ints.Add(4);
+            ints.Add(5);
+
+            ImmutableList<int> immutableList = ints.ToImmutable();
 
             return Ok();
         }
